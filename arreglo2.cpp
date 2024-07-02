@@ -6,7 +6,7 @@ int main(){
     cout<<"Ingresa un numero: ";cin>>n;
 
     int A[n];
-    int P[n];
+    int Par[n];
     int Impar[n];
 
     for (int i = 0; i < n; i++){
@@ -14,13 +14,22 @@ int main(){
         cin>>A[i];
 
         if (A[i] % 2 == 0){
-            P[par] = A[i];
+            Par[par] = A[i];
             par++;
         }else{
             Impar[impar] = A[i];
             impar++;
         }
-        
+    }
+
+    cout<<"Numeros pares: "<<endl;
+    for (int i = 0; i < par; i++){
+        cout<<Par[i]<<endl;
+    }
+
+    cout<<"Numeros impares: "<<endl;
+    for (int i = 0; i < impar; i++){
+        cout<<Impar[i]<<endl;
     }
     
     return 0;
