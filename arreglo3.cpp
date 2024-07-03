@@ -11,8 +11,7 @@ int main(){
         cout<<"Ingrese la temperatura maxima del dia "<< i + 1 <<" : ";cin>>tempMax[i];        
     }
 
-    float temMedia[dias];
-    float menorTemp = tempMin[0];
+    float temMedia[dias], menorTemp = tempMin[0];
     int diaMenorTemp = 0;
 
     for (int i = 0; i < dias; i++){
@@ -25,6 +24,23 @@ int main(){
         }
     }
     cout<<"El dia con menor temperatura es: "<< diaMenorTemp  + 1 <<endl;
+    cout<<" "<<endl;
 
+    int max; 
+    bool temperatura = false;
+
+    cout<<"Ingrese un valor de temperatura maxima: ";cin>>max;
+
+    for (int i = 0; i < dias; i++){
+        if (max == tempMax[i]){
+            cout<<"El dia "<<i + 1 <<" coincide con la temperatura "<<endl;
+            temperatura = true;
+        }
+    }
+
+    if (temperatura == false){
+        cout<<"Ningun dia coicide con esta temperatura"<<endl;
+    }
+    
     return 0;
 }
