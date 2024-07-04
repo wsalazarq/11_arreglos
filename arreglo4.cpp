@@ -1,14 +1,21 @@
 #include <iostream>
 using namespace std;
 
-void llenarArreglo(int, int, int);
+void llenarArreglo(int A[], int n, int mult);
 
 int main() {
-    int n, mult, A[n];
+    int n, mult;
 
     cout<<"Ingrese un valor: ";cin>>n;
     cout<<"Ingrese un numero: ";cin>>mult;
+    int  A[n];
 
+    llenarArreglo(A, n, mult);
+
+    cout << "Los múltiplos son: ";
+    for (int i = 0; i < n; i++){
+        cout<<A[i]<<" ";
+    }
     return 0;
 }
 
